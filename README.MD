@@ -86,38 +86,34 @@ sudo nano /etc/fail2ban/action.d/sendmail-gmail.conf
 
 Insert:
 
-``` ini
-[Definition]
+``` [Definition]
 
 actionstart =
 actionstop =
 actioncheck =
 
-actionban = /usr/bin/mail -s "Fail2Ban: <name> banned <ip>" <dest> <<< "Host: <fq-hostname>
-Jail: <name>
-IP: <ip>
-Date: $(date '+%Y-%m-%d %H:%M:%S')"
-actionunban = /usr/bin/mail -s "Fail2Ban: <name> unbanned <ip>" <dest> <<< "Host: <fq-hostname>
-Jail: <name>
-IP: <ip>
-Date: $(date '+%Y-%m-%d %H:%M:%S')"
+actionban = /etc/fail2ban/send_gmail.py <name> <ip> <fq-hostname> ban
+actionunban = /etc/fail2ban/send_gmail.py <name> <ip> <fq-hostname> unban
 
 [Init]
-dest = youraddress@gmail.com
-sender = youraddress@gmail.com
-sendername = Fail2Ban
-smtpserver = smtp.gmail.com
-smtpport = 587
-smtpuser = youraddress@gmail.com
-smtppassword = your_app_password
 ```
 
 ### 4.3 Integration with jail.local
 
-``` ini
-[DEFAULT]
+``` [DEFAULT]
+bantime  = 10m
+findtime = 10m
+maxretry = 3
+
 action = %(action_mwl)s
          sendmail-gmail[name=SSH, dest=youraddress@gmail.com, sender=youraddress@gmail.com]
+
+[sshd]
+enabled  = true
+port     = ssh
+logpath  = /var/log/auth.log
+banaction = iptables-multiport
+
 ```
 
 ------------------------------------------------------------------------
