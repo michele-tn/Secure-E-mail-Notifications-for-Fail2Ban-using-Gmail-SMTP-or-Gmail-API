@@ -86,7 +86,8 @@ sudo nano /etc/fail2ban/action.d/sendmail-gmail.conf
 
 Insert:
 
-``` [Definition]
+``` 
+[Definition]
 
 actionstart =
 actionstop =
@@ -100,7 +101,8 @@ actionunban = /etc/fail2ban/send_gmail.py <name> <ip> <fq-hostname> unban
 
 ### 4.3 Integration with jail.local
 
-``` [DEFAULT]
+``` 
+[DEFAULT]
 bantime  = 10m
 findtime = 10m
 maxretry = 3
