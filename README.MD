@@ -132,19 +132,40 @@ banaction = iptables-multiport
 ### 5.2 Python Script
 
 ``` python
-from google.oauth2.credentials import Credentials
-from googleapiclient.discovery import build
+#!/usr/bin/env python3
+import smtplib, ssl, sys
 from email.mime.text import MIMEText
-import base64
+from email.mime.multipart import MIMEMultipart
+from datetime import datetime
 
-def send_gmail_message(subject, body, to):
-    creds = Credentials.from_authorized_user_file('token.json', ['https://www.googleapis.com/auth/gmail.send'])
-    service = build('gmail', 'v1', credentials=creds)
-    message = MIMEText(body)
-    message['to'] = to
-    message['subject'] = subject
-    raw = base64.urlsafe_b64encode(message.as_bytes()).decode()
-    service.users().messages().send(userId="me", body={'raw': raw}).execute()
+# Parametri da Fail2Ban
+jail = sys.argv[1]
+ip = sys.argv[2]
+hostname = sys.argv[3]
+action = sys.argv[4]  # "ban" o "unban"
+
+# Email
+subject = f"Fail2Ban: {jail} {action}ned {ip}"
+body = f"""Host: {hostname}
+Jail: {jail}
+IP: {ip}
+Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"""
+
+sender_email = "youraddress@gmail.com"
+receiver_email = "youraddress@gmail.com"
+password = "YOUR_APP_PASSWORD"
+
+message = MIMEMultipart()
+message["From"] = sender_email
+message["To"] = receiver_email
+message["Subject"] = subject
+message.attach(MIMEText(body, "plain"))
+
+context = ssl.create_default_context()
+with smtplib.SMTP("smtp.gmail.com", 587) as server:
+    server.starttls(context=context)
+    server.login(sender_email, password)
+    server.sendmail(sender_email, receiver_email, message.as_string())
 ```
 
 ------------------------------------------------------------------------
