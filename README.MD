@@ -13,18 +13,33 @@
 
 </header>
 
-<!-- 🔔 UPDATE (GitHub-safe) -->
+> ┌──────────────────────────────────────────────────────────────┐
+> │ 📢 **UPDATE DISPONIBILE**                                    │
+> └──────────────────────────────────────────────────────────────┘
+> **Secure E-mail Notifications for Fail2Ban (Version 2)**  
+> *Ultimo aggiornamento:* **29/10/2025 – 14:56:33**  
+> 🔗 [Consulta la documentazione aggiornata (README_Vs2.md)](https://github.com/michele-tn/Secure-E-mail-Notifications-for-Fail2Ban-using-Gmail-SMTP-or-Gmail-API/blob/main/README_Vs2.md)
+
+
+
+| 📢 **UPDATE DISPONIBILE** | **Secure E-mail Notifications for Fail2Ban (Version 2)** |
+|---|---|
+| ⏱️ *Ultimo aggiornamento:* | **29/10/2025 – 14:56:33** |
+| 🔗 Documentazione aggiornata | [README_Vs2.md](https://github.com/michele-tn/Secure-E-mail-Notifications-for-Fail2Ban-using-Gmail-SMTP-or-Gmail-API/blob/main/README_Vs2.md) |
+
+
+
+
+<!-- 🔔 UPDATE BANNER -->
 <details open>
-  <summary><strong>📢 Update – <time datetime="2025-10-29T14:56:33+01:00">29/10/2025 14:56:33</time></strong></summary>
-  <p>
-    <strong>Secure E-mail Notifications for Fail2Ban (Version 2)</strong>
-  </p>
-  <p>
-    🔗 <a href="https://github.com/michele-tn/Secure-E-mail-Notifications-for-Fail2Ban-using-Gmail-SMTP-or-Gmail-API/blob/main/README_Vs2.md">
-      Consulta la documentazione aggiornata (README_Vs2.md)
-    </a>
-  </p>
+  <summary><strong>📢 UPDATE DISPONIBILE</strong></summary>
+  <blockquote>
+    <p><strong>Secure E-mail Notifications for Fail2Ban (Version 2)</strong></p>
+    <p>⏱️ Ultimo aggiornamento: <time datetime="2025-10-29T14:56:33+01:00">29/10/2025 – 14:56:33</time></p>
+    <p>🔗 <a href="https://github.com/michele-tn/Secure-E-mail-Notifications-for-Fail2Ban-using-Gmail-SMTP-or-Gmail-API/blob/main/README_Vs2.md">Consulta la documentazione aggiornata</a></p>
+  </blockquote>
 </details>
+
 
 
 
