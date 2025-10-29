@@ -13,42 +13,19 @@
 
 </header>
 
-<!-- 🔔 UPDATE BOX - start -->
-<section role="note" aria-label="Aggiornamento"
- style="border:2px solid #30363d;padding:16px;border-radius:8px;
- background:#f6f8fa;margin:15px 0;box-shadow:0 0 6px rgba(0,0,0,0.08);">
+<!-- 🔔 UPDATE (GitHub-safe) -->
+<details open>
+  <summary><strong>📢 Update – <time datetime="2025-10-29T14:56:33+01:00">29/10/2025 14:56:33</time></strong></summary>
+  <p>
+    <strong>Secure E-mail Notifications for Fail2Ban (Version 2)</strong>
+  </p>
+  <p>
+    🔗 <a href="https://github.com/michele-tn/Secure-E-mail-Notifications-for-Fail2Ban-using-Gmail-SMTP-or-Gmail-API/blob/main/README_Vs2.md">
+      Consulta la documentazione aggiornata (README_Vs2.md)
+    </a>
+  </p>
+</details>
 
-  <header style="margin-bottom:8px;">
-    <h3 style="margin:0;font-size:1.15em;">
-      📢 <strong>Update Notification</strong>
-    </h3>
-    <small style="color:#555;">
-      Ultimo aggiornamento: 
-      <time datetime="2025-10-29T14:56:33+01:00">
-        29/10/2025 – 14:56:33
-      </time>
-    </small>
-  </header>
-
-  <article style="margin-top:10px;line-height:1.45;">
-    <p style="margin: 0.3em 0;">
-      È disponibile la nuova revisione documentata di:
-      <br>
-      <strong style="font-size:1.05em;">
-        Secure E-mail Notifications for Fail2Ban (Version 2)
-      </strong>
-    </p>
-
-    <p style="margin-top:8px;">
-      🔗 <a href="https://github.com/michele-tn/Secure-E-mail-Notifications-for-Fail2Ban-using-Gmail-SMTP-or-Gmail-API/blob/main/README_Vs2.md"
-         style="font-weight:bold;text-decoration:none;border-bottom:1px solid #0969da;">
-        Consulta la documentazione aggiornata (README_Vs2.md)
-      </a>
-    </p>
-  </article>
-
-</section>
-<!-- 🔔 UPDATE BOX - end -->
 
 
 ------------------------------------------------------------------------
