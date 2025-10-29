@@ -13,6 +13,27 @@
 
 </header>
 
+<!-- 🔔 UPDATE BOX - start -->
+<section role="note" aria-label="Aggiornamento">
+  <details open>
+    <summary>
+      <strong>UPDATE:</strong>
+      <time datetime="2025-10-29T14:56:33+01:00">29/10/2025 14:56:33</time>
+    </summary>
+    <div>
+      <p style="margin: 0.4em 0 0.6em;">
+        <strong>Secure E-mail Notifications for Fail2Ban (Version 2)</strong>
+      </p>
+      <p style="margin: 0;">
+        🔗 <a href="https://github.com/michele-tn/Secure-E-mail-Notifications-for-Fail2Ban-using-Gmail-SMTP-or-Gmail-API/blob/main/README_Vs2.md">
+          Leggi l'aggiornamento (README_Vs2.md)
+        </a>
+      </p>
+    </div>
+  </details>
+</section>
+<!-- 🔔 UPDATE BOX - end -->
+
 ------------------------------------------------------------------------
 
 ## Abstract
