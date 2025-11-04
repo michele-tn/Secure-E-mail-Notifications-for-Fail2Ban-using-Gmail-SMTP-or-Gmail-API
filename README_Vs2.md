@@ -100,7 +100,9 @@ Follow the interactive prompts for SSH port, sender, recipient, and Gmail app pa
 
 ### Testing Email Notifications
 ```bash
-/usr/local/bin/send_email_gmail.py sshd 127.0.0.1 TEST
+export FAIL2BAN_SMTP_PASS="Gmail_App_Password"
+
+python3 ../../usr/local/bin/send_email_gmail.py --sender "youraddress@gmail.com" --dest   "DESTaddress@gmail.com" --subject "email deliverability tests" --message "Take this email deliverability test!"
 ```
 
 ### Unbanning Commands
