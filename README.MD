@@ -28,7 +28,7 @@
 
 — — — — — — — — — — — — —
 <!-- 🔔 UPDATE BANNER -->
-<details open>
+<!-- <details open>
   <summary><strong>📢 OFFICIAL UPDATE NOTICE</strong></summary>
   <blockquote>
     <p><strong>Fail2Ban Manager Script (Version 3)</strong></p>
@@ -46,7 +46,9 @@ ad2bff77eb9d46550bb46af4bfd92ddd5914c42600172a14b323100bef325f90<br/></p>
       <li>Hardened flow (best-effort installs, safe fallbacks, resilient to missing tools).</li>
     </ul>
   </blockquote>
-</details>
+</details> -->
+
+<!-- 🔔 UPDATE BANNER --> <details open> <summary><strong>📢 OFFICIAL UPDATE NOTICE</strong></summary> <blockquote> <p><strong>Fail2Ban Manager Script (Version 3)</strong></p> <p>⏱ Last revision date: <time datetime="2025-11-13">November 13, 2025</time></p> <p>🔗 <a href="https://github.com/michele-tn/Secure-E-mail-Notifications-for-Fail2Ban-using-Gmail-SMTP-or-Gmail-API/blob/main/manage_fail2ban_v3.tar.gz">manage_fail2ban_v3.tar.gz</a><br/> SHA256 checksum<br/> ad2bff77eb9d46550bb46af4bfd92ddd5914c42600172a14b323100bef325f90<br/></p> <ul> <li>Interactive <strong>SSH port prompt</strong> (auto-detects active port, lets you override).</li> <li><strong>Forced firewall action</strong> (iptables/nft) with backend auto-detect and guaranteed INPUT → <code>f2b-sshd</code> jump.</li> <li>One-click <strong>Unban</strong>: single IP across all jails or <strong>unban all</strong> (uses <code>fail2ban-client unban --all</code> when supported).</li> <li>Optional <strong>Gmail notifications</strong> with prompts for sender/recipient/App Password (press Enter to skip).</li> <li>Automatic <strong>HTML email reports</strong> for SSH connection attempts and bans, including <strong>WHOIS</strong>, reverse DNS, username, authentication method, and correlated log snippet.</li> <li><strong>Purge DB</strong> utility to wipe malformed bans and rebuild chains safely.</li> <li>Built-in <strong>Doctor</strong> (backend/port/rules/logs diagnostics).</li> <li>Hardened flow (best-effort installs, safe fallbacks, resilient to missing tools).</li> </ul> </blockquote> </details>
 — — — — — — — — — — — — —
 
 ------------------------------------------------------------------------
