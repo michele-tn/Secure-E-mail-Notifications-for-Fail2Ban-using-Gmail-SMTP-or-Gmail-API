@@ -33,10 +33,9 @@
   <blockquote>
     <p><strong>Fail2Ban Manager Script (Version 3)</strong></p>
     <p>⏱ Last revision date: <time datetime="2025-11-12">November 12, 2025</time></p>
-    <p>🔗 <a href="https://github.com/michele-tn/Secure-E-mail-Notifications-for-Fail2Ban-using-Gmail-SMTP-or-Gmail-API/blob/main/manage_fail2ban_v3.tar.gz">manage_fail2ban_v3.tar.gz</a>
-SHA256 checksum
-ad2bff77eb9d46550bb46af4bfd92ddd5914c42600172a14b323100bef325f90
-</p>
+    <p>🔗 <a href="https://github.com/michele-tn/Secure-E-mail-Notifications-for-Fail2Ban-using-Gmail-SMTP-or-Gmail-API/blob/main/manage_fail2ban_v3.tar.gz">manage_fail2ban_v3.tar.gz</a><br/>
+SHA256 checksum<br/>
+ad2bff77eb9d46550bb46af4bfd92ddd5914c42600172a14b323100bef325f90<br/></p>
     <ul>
       <li>Interactive <strong>SSH port prompt</strong> (auto-detects active port, lets you override).</li>
       <li><strong>Forced firewall action</strong> (iptables/nft) with backend auto-detect and guaranteed INPUT → <code>f2b-sshd</code> jump.</li>
