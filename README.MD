@@ -32,7 +32,7 @@
   <summary><strong>📢 OFFICIAL UPDATE NOTICE</strong></summary>
   <blockquote>
     <p><strong>Fail2Ban Manager Script (Version 3)</strong></p>
-    <p>⏱ Last revision date: <time datetime="2025-11-12">November 12, 2025</time></p>
+    <p>⏱ Last revision date: <time datetime="2025-11-13">November 13, 2025</time></p>
     <p>🔗 <a href="https://github.com/michele-tn/Secure-E-mail-Notifications-for-Fail2Ban-using-Gmail-SMTP-or-Gmail-API/blob/main/manage_fail2ban_v3.tar.gz">manage_fail2ban_v3.tar.gz</a><br/>
 SHA256 checksum<br/>
 ad2bff77eb9d46550bb46af4bfd92ddd5914c42600172a14b323100bef325f90<br/></p>
