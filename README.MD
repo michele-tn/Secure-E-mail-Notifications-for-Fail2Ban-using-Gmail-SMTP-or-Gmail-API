@@ -46,7 +46,7 @@ ad2bff77eb9d46550bb46af4bfd92ddd5914c42600172a14b323100bef325f90<br/></p>
       <li>Hardened flow (best-effort installs, safe fallbacks, resilient to missing tools).</li>
     </ul>
 
-  ![Manage Fail2Ban](https://raw.githubusercontent.com/michele-tn/Secure-E-mail-Notifications-for-Fail2Ban-using-Gmail-SMTP-or-Gmail-API/main/MANAGE_fail2ban_Vs3.jpg)
+  <img src="https://raw.githubusercontent.com/michele-tn/Secure-E-mail-Notifications-for-Fail2Ban-using-Gmail-SMTP-or-Gmail-API/main/MANAGE_fail2ban_Vs3.jpg">
   </blockquote>
 </details> -->
 
