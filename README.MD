@@ -87,7 +87,7 @@ sudo systemctl status fail2ban
 ### 4.1 App Password Setup
 
 1.  Enable **2-Step Verification** in your Google account\
-2.  Go to: https://myaccount.google.com/apppasswords\
+2.  Go to: https://myaccount.google.com/apppasswords
 3.  Generate a password for "Mail"\
 4.  Copy and store it securely
 
