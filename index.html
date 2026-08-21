@@ -562,7 +562,7 @@
       </a>
       <nav class="top-actions" aria-label="Primary links">
         <a class="button" href="https://github.com/michele-tn/Secure-E-mail-Notifications-for-Fail2Ban-using-Gmail-SMTP-or-Gmail-API/blob/main/README_Vs2.md">Version 2 Docs</a>
-        <a class="button primary" href="https://github.com/michele-tn/Secure-E-mail-Notifications-for-Fail2Ban-using-Gmail-SMTP-or-Gmail-API/blob/main/manage_fail2ban_v3.tar.gz">Download V3</a>
+        <a class="button primary" href="manage_fail2ban_v3.tar.gz" download data-download-v3>Download V3</a>
       </nav>
     </div>
   </header>
@@ -637,7 +637,7 @@
           <p><strong>Fail2Ban Manager Script (Version 3)</strong></p>
           <p>Last revision date: <time datetime="2025-11-13">November 13, 2025</time></p>
           <div class="download">
-            <a class="button primary" href="https://github.com/michele-tn/Secure-E-mail-Notifications-for-Fail2Ban-using-Gmail-SMTP-or-Gmail-API/blob/main/manage_fail2ban_v3.tar.gz">Download manage_fail2ban_v3.tar.gz</a>
+            <a class="button primary" href="manage_fail2ban_v3.tar.gz" download data-download-v3>Download manage_fail2ban_v3.tar.gz + SHA256</a>
             <span class="checksum">SHA256: ad2bff77eb9d46550bb46af4bfd92ddd5914c42600172a14b323100bef325f90</span>
           </div>
           <ul>
@@ -894,6 +894,56 @@ Time: $(date '+%Y-%m-%d %H:%M:%S')"</code></pre>
   </footer>
 
   <script>
+    const downloadV3Files = async (event) => {
+      event.preventDefault();
+      const button = event.currentTarget;
+      if (button.dataset.busy === "true") return;
+      const originalLabel = button.textContent;
+      button.dataset.busy = "true";
+      button.setAttribute("aria-disabled", "true");
+      button.textContent = "Preparing both files…";
+
+      try {
+        const files = [
+          {
+            name: "manage_fail2ban_v3.tar.gz",
+            url: "https://raw.githubusercontent.com/michele-tn/Secure-E-mail-Notifications-for-Fail2Ban-using-Gmail-SMTP-or-Gmail-API/refs/heads/main/manage_fail2ban_v3.tar.gz"
+          },
+          {
+            name: "manage_fail2ban_v3.sha256",
+            url: "https://raw.githubusercontent.com/michele-tn/Secure-E-mail-Notifications-for-Fail2Ban-using-Gmail-SMTP-or-Gmail-API/refs/heads/main/manage_fail2ban_v3.sha256"
+          }
+        ];
+        const downloads = await Promise.all(files.map(async (file) => {
+          const response = await fetch(file.url, { cache: "no-store" });
+          if (!response.ok) throw new Error(`${file.name}: HTTP ${response.status}`);
+          return { name: file.name, blob: await response.blob() };
+        }));
+
+        downloads.forEach((file) => {
+          const objectUrl = URL.createObjectURL(file.blob);
+          const link = document.createElement("a");
+          link.href = objectUrl;
+          link.download = file.name;
+          document.body.appendChild(link);
+          link.click();
+          link.remove();
+          window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+        });
+      } catch (error) {
+        window.alert("Download failed. Please try again.");
+        console.error("Fail2Ban V3 download failed:", error);
+      } finally {
+        button.dataset.busy = "false";
+        button.removeAttribute("aria-disabled");
+        button.textContent = originalLabel;
+      }
+    };
+
+    document.querySelectorAll("[data-download-v3]").forEach((button) => {
+      button.addEventListener("click", downloadV3Files);
+    });
+
     document.querySelectorAll(".copy-btn").forEach((button) => {
       button.addEventListener("click", async () => {
         const block = button.closest(".code-wrap");
